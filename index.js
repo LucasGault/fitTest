@@ -65,33 +65,33 @@ app.get('/test', async (req, res) => {
   console.log(tokens.tokens.access_token)
   // console.log(tokens)
   res.send('HELLO')
-  try {
-    const result = await axios({
-      method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + tokens.tokens.access_token
-      },
-      "Content-Type": "application/json",
-      // url: `https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate`,
-      url: `https://www.googleapis.com/fitness/v1/users/me/dataSources`,
-      // data: {
-      //   aggregateBy : [
-      //     {
-      //       dataTypeName: "com.google.step_count.delta",
-      //       dataSourceId: "derived:com.google.step_count.delta:com.google.android.gms:estimated_steps"
-      //     }
-      //   ],
-      //   bucketByTime : {durationMillis: 86400000},
-      //   startTimeMillis: 1621814399,
-      //   endTimeMillis: 1621987199
-      // }
-    })
-    console.log(result.data)
-    // var stepArray = result.data.bucket
+  // try {
+  //   const result = await axios({
+  //     method: 'POST',
+  //     headers: {
+  //       authorization: 'Bearer ' + tokens.tokens.access_token
+  //     },
+  //     "Content-Type": "application/json",
+  //     // url: `https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate`,
+  //     url: `https://www.googleapis.com/fitness/v1/users/me/dataSources`,
+  //     // data: {
+  //     //   aggregateBy : [
+  //     //     {
+  //     //       dataTypeName: "com.google.step_count.delta",
+  //     //       dataSourceId: "derived:com.google.step_count.delta:com.google.android.gms:estimated_steps"
+  //     //     }
+  //     //   ],
+  //     //   bucketByTime : {durationMillis: 86400000},
+  //     //   startTimeMillis: 1621814399,
+  //     //   endTimeMillis: 1621987199
+  //     // }
+  //   })
+  //   console.log(result.data)
+  //   // var stepArray = result.data.bucket
 
-  } catch (e) {
-    console.log(e)
-  }
+  // } catch (e) {
+  //   console.log(e)
+  // }
   // try {
   //   for (const dataSet of stepArray) {
   //     console.log(dataSet)
