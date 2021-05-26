@@ -28,7 +28,7 @@ app.get("/getUrlTing", (req, res) => {
     // link to redirect
     "http://localhost:3000/test"
   )
-  const scopes = ["https://www.googleapis.com/auth/fitness.heart_rate.read"]
+  const scopes = ["https://www.googleapis.com/auth/fitness.activity.read"]
 
   const url = oauth2Client.generateAuthUrl({
     access_type: "offline",
@@ -64,12 +64,12 @@ app.get('/test', async (req, res) => {
   const tokens = await oauth2Client.getToken(code)
   console.log(tokens.tokens.access_token)
   // console.log(tokens)
-  res.send('HELLO') 
+  res.send('HELLO')
   // try {
   //   const result = await axios({
   //     method: 'POST',
   //     headers: {
-  //       authorization: 'Bearer ' + tokens.tokens.access_token
+  //       'Authorization': 'Bearer ' + tokens.tokens.access_token
   //     },
   //     "Content-Type": "application/json",
   //     // url: `https://www.googleapis.com/fitness/v1/users/me/dataset:aggregate`,
