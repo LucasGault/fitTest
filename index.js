@@ -28,7 +28,7 @@ app.get("/getUrlTing", (req, res) => {
     // link to redirect
     "http://localhost:3000/test"
   )
-  const scopes = ["https://www.googleapis.com/auth/fitness.activity.read"]
+  const scopes = ["https://www.googleapis.com/auth/itness.heart_rate.read"]
 
   const url = oauth2Client.generateAuthUrl({
     access_type: "offline",
